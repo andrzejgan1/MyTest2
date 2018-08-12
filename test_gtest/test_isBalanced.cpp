@@ -5,6 +5,7 @@ TEST(isBalanced, noPass)
 {
     ASSERT_EQ(0, isBalanced(""));
     ASSERT_EQ(0, isBalanced("{{{}"));
+    ASSERT_EQ(0, isBalanced("[{}["));
 }
 TEST(isBalanced, pass)
 {
