@@ -11,13 +11,31 @@ bool isBalanced(std::string s)
     {
         for (int i = 0; i < s.size(); i++)
         {
-            if (s[i] == '{') a.push_back(1);
-            if (s[i] == '[') b.push_back(1);
-            if (s[i] == ')') c.push_back(1);
+            switch (s[i])
+            {
+                case '{' : a.push_back(1); break;
+                case '[' : b.push_back(1); break;
+                case '(' : c.push_back(1); break;
 
-            if (s[i] == '}') a.pop_back();
-            if (s[i] == ']') b.pop_back();
-            if (s[i] == ')') c.pop_back();
+                case '}' : 
+                           {
+                               if (a.empty()) return 0;
+                               a.pop_back(); 
+                               break;
+                           }
+                case ']' : 
+                           {
+                               if (b.empty()) return 0;
+                               b.pop_back(); 
+                               break;
+                           }
+                case ')' : 
+                           {
+                               if (c.empty()) return 0;
+                               c.pop_back(); 
+                               break;
+                           }
+            }
         }
         if(a.empty() && b.empty() && c.empty()) return 1;
     }
