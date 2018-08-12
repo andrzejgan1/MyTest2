@@ -4,14 +4,15 @@
 
 bool isBalanced(std::string s)
 {
+    std::vector<int> a;
     if(s.size()%2 == 0 && s.size() != 0)
     {
-        for (int i = 0; i < s.size()/2; i++)
+        for (int i = 0; i < s.size(); i++)
         {
-            if (s[i] != '{') return 0;
-            if (s[s.size()-1-i] != '}') return 0;
+            if (s[i] == '{') a.push_back(1);
+            if (s[i] == '}') a.pop_back();
         }
-        return 1;
+        if(a.empty()) return 1;
     }
     return 0;
 }
