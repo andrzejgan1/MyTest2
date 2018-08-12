@@ -20,4 +20,4 @@ script:
   - cmake ..
   - make
   - ls
-  - ./isBalanced-ut
+  - ./IsBalanced-ut
