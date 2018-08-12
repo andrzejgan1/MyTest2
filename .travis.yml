@@ -14,13 +14,6 @@ install:
   - sudo apt-get install -qq g++-5
   - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 90
 
-os:
-  - linux
-
-compiler:
-  - g++
-  - clang
-
 script:
   - mkdir build
   - cd build
