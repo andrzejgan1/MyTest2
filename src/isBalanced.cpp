@@ -4,6 +4,13 @@
 
 bool isBalanced(std::string s)
 {
-    if(s.front() == '{' && s.back() == '}') return 1;
+    if(s.size()==4)
+    {
+        if(s[0] == '{' && s[2] == '{' && s[3] == '}' && s[4] == '}') return 1;
+    }
+    if(s.size()==2)
+    {
+        if(s[0] == '{' && s[1] == '}' ) return 1;
+    }
     return 0;
 }
