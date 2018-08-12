@@ -7,6 +7,7 @@ TEST(isBalanced, noPass)
 }
 TEST(isBalanced, pass)
 {
+    ASSERT_EQ(1, isBalanced("{}"));
 }
 
 int main(int argc, char **argv) {
