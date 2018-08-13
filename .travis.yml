@@ -2,7 +2,8 @@ sudo: required
 language: cpp
 compiler: gcc
 dist: trusty
-
+os:
+    - linux
 
 before_install:
   # C++14
